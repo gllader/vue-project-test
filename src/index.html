@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+    <title>Jogos Vue.js</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="header">
+        <h2>{{pageTitle}}</h2>
+      </div>
+      <hr />
+      <div class="container">
+        <ul>
+          <li v-for="game in games" v-bind:class="{'removed': game.checked}">
+            <div class="checkbox">
+              <input
+                type="checkbox"
+                name="list"
+                class="jogos"
+                v-model="game.checked"
+              />
+              <span>{{game.title}}</span> - <span>{{game.platform}}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="input-form">
+        <div>
+          <input v-model="newTitle" placeholder="Insira o nome do jogo" type="text"/>
+        </div>
+        <div>
+          <input v-model="newPlatform" placeholder="Insira a plataforma" type="text"/>
+        </div>
+        <span class="input-group-btn">
+          <button
+            class="js-add btn btn-primary btn-block"
+            type="button"
+            @click="addGame"
+          >
+            Adicionar
+          </button>
+        </span>
+      </div>
+    </div>
+  </body>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.js"
+  ></script>
+  <script src="scripts.js"></script>
+</html>

@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(202, 197, 197);
+}
+
+.removed span{
+  text-decoration: line-through;
+}
+
+li {
+  list-style: none;
+}
+
+.header {
+  /* border: 1px solid blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  /* border: 1px solid red; */
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-form {
+  /* border: 1px solid green; */
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
